@@ -3,6 +3,13 @@
 #define MATRIX_NB_LINE 2
 #define MATRIX_NB_COL 3
 
+void print_float(float x) {
+    if ((int) x == x)
+        printf("%d", (int)x);
+    else
+        printf("%.1f", x);
+}
+
 int main() {
     float a[MATRIX_NB_LINE][MATRIX_NB_COL];
     float b[MATRIX_NB_COL][MATRIX_NB_LINE];
@@ -25,7 +32,8 @@ int main() {
     printf("The first matrix you entered is\n");
     for(int i = 0; i < MATRIX_NB_LINE; i++) {
         for(int j = 0; j < MATRIX_NB_COL; j++) {
-            printf("%f ", a[i][j]);
+            print_float(a[i][j]);
+            printf(" ");
         }
 
         printf("\n");
@@ -33,9 +41,10 @@ int main() {
 
     //second matrix display
     printf("The second matrix you entered is\n");
-    for(int i = 0; i < MATRIX_NB_COL; i++) {
-        for(int j = 0; j < MATRIX_NB_LINE; j++) {
-            printf("%f ", b[i][j]);
+    for(int i = 0; i < MATRIX_NB_LINE; i++) {
+        for(int j = 0; j < MATRIX_NB_COL; j++) {
+            print_float(b[i][j]);
+            printf(" ");
         }
 
         printf("\n");
@@ -50,7 +59,8 @@ int main() {
                 coeff += a[i][k] * b[k][j];
             }
 
-            printf("%f ", coeff);
+            print_float(coeff);
+            printf(" ");
         }
 
         printf("\n");
