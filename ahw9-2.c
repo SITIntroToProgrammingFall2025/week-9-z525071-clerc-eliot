@@ -61,5 +61,5 @@ int main() {
     merge_sort(arr, 0, ARR_SIZE);
 
     printf("sorted array:\n");
-    display_arr(arr);
+    display_arr(arr, ARR_SIZE);
 }
