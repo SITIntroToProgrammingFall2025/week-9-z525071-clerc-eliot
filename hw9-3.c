@@ -50,7 +50,7 @@ int main() {
         printf("\n");
     }
 
-    printf("The multiplication product of matrix A and matrix B :\n");
+    printf("The multiplication product of matrix A and matrix B:\n");
     for(int i = 0; i < MATRIX_NB_LINE; i++) {
         for(int j = 0; j < MATRIX_NB_LINE; j++) {
 
