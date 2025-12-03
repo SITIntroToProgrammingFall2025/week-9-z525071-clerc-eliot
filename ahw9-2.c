@@ -6,8 +6,6 @@ void display_arr(int* arr, int length) {
     for(int i = 0; i < length; i++) {
         printf("%d ", arr[i]);
     }
-
-    printf("\n");
 }
 
 void swap(int* arr, int id1, int id2) {
@@ -61,4 +59,7 @@ int main() {
     }
 
     merge_sort(arr, 0, ARR_SIZE);
+
+    printf("sorted array:\n");
+    display_arr(arr);
 }
