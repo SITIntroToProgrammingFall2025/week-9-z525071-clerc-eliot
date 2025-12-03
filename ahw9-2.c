@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define ARR_SIZE 5
+
 void display_arr(int* arr, int length) {
     for(int i = 0; i < length; i++) {
         printf("%d ", arr[i]);
@@ -51,3 +53,12 @@ void merge_sort(int* arr, int id_start, int id_end) {
     }
 }
 
+int main() {
+    int arr[ARR_SIZE] = {};
+
+    for(int i = 0; i < ARR_SIZE; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    merge_sort(arr, 0, ARR_SIZE);
+}
