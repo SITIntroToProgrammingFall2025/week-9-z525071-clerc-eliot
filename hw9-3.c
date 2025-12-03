@@ -30,8 +30,8 @@ int main() {
 
     //first matrix display
     printf("The first matrix you entered is\n");
-    for(int i = 0; i < MATRIX_NB_LINE; i++) {
-        for(int j = 0; j < MATRIX_NB_COL; j++) {
+    for(int i = 0; i < MATRIX_NB_COL; i++) {
+        for(int j = 0; j < MATRIX_NB_LINE; j++) {
             print_float(a[i][j]);
             printf(" ");
         }
